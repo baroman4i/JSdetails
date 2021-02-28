@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="#">
+    <div class="tabs">
+        <div class="tab-item active" datatype="Цвет" datasrc="Mechanism"><span>Механизм</span></div>
+        <div class="tab-item" datatype="Корпус" datasrc="Body"><span>Корпус</span></div>
+        <div class="tab-item" datatype="Узел" datasrc="Node"><span>Узел</span></div>
+    </div>
+    <div class="form-line">
+        <input type="text" id="param4" tabindex="0" placeholder="Введите имя">
+        <label for="param4" id="l4">Имя</label>
+    </div>
+    <div class="form-line">
+        <input type="number" id="param1" min="0" placeholder="Введите цену">
+        <label for="param1" id="l1">Цена</label>
+    </div>
+    <div class="form-line">
+        <input type="number" id="param2" min="0" placeholder="Введите кол-во элементов">
+        <label for="param2" id="l2">Количество</label>
+    </div>
+    <div class="form-line">
+        <input type="text" id="param3" placeholder="Введите параметр">
+        <label for="param3" id="l3">Цвет</label>
+    </div>
+    <input type="submit" value="Добавить" id="sub">
+</form>
+<div class="main-components">
+    <div class="sort-container">
+         <select name="sort" id="sort">
+            <option value="chosen't">Не выбрано</option>
+            <option value="increase">По возрастанию цены</option>
+            <option value="decrease">По убыванию цены</option>
+             <option value="amountI">По воздаст кол-ва</option>
+             <option value="amountD">По убыв кол-ва</option>
+            <option value="type">По типу детали</option>
+        </select>
+        <input type="number" min="1" id="from" placeholder="От">
+        <input type="number" min="1" id="before" placeholder="До">
+        <input type="submit" id="price-range">
+    </div>
+    <div class="components-container">
+        <div class="components-scroll-container"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
